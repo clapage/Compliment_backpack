@@ -1,5 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
+
+const root = document.getElementById('root');
+
+if (root !== null) {
+  const app = (
+    <React.StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </React.StrictMode>
+  );
+
+  ReactDOM.createRoot(root).render(app);
+} else {
+  console.error('Root element not found.');
+}
+
+/*
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -15,3 +37,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+*/
